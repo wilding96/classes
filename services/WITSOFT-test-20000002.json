@@ -1,0 +1,15 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^(http://192.168.1.142:8099|http://192.168.1.142:8099).*",
+  "name" : "witsoft_test_client",
+  "id" : 20000002,
+  "description" : "This service is witsoft test client.",
+  "evaluationOrder" : 2,
+  "attributeReleasePolicy" : {
+    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  },
+  "proxyPolicy" : {
+    "@class" : "org.jasig.cas.services.RegexMatchingRegisteredServiceProxyPolicy",
+    "pattern" : "^(http|imap|https|imaps)://.*"
+  }
+}
